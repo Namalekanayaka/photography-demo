@@ -97,7 +97,7 @@ export default function ProjectsPage() {
                 <div className="max-w-7xl mx-auto">
 
                     {/* Header */}
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-16 overflow-hidden md:mb-24">
+                    <div className="flex flex-col items-center md:flex-row md:justify-between md:items-end mb-16 overflow-hidden md:mb-24">
                         <h1
                             ref={titleRef}
                             className="text-[12vw] md:text-[10vw] leading-[0.8] font-black uppercase text-brandBlack tracking-tighter mix-blend-darken"
