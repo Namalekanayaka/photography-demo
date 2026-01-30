@@ -17,14 +17,14 @@ import imgFeatured1 from '@/app/images/featured-1.png';
 import imgFeatured2 from '@/app/images/featured-2.png';
 
 const galleryImages = [
-    { src: img1, alt: 'Gallery Image 1', aspect: 'aspect-[3/4]' },
-    { src: img2, alt: 'Gallery Image 2', aspect: 'aspect-square' },
-    { src: img3, alt: 'Gallery Image 3', aspect: 'aspect-[4/3]' },
-    { src: img4, alt: 'Gallery Image 4', aspect: 'aspect-[3/4]' },
-    { src: imgHero, alt: 'Gallery Image 5', aspect: 'aspect-video' },
-    { src: img5, alt: 'Gallery Image 6', aspect: 'aspect-square' },
-    { src: imgFeatured1, alt: 'Gallery Image 7', aspect: 'aspect-[3/4]' },
-    { src: imgFeatured2, alt: 'Gallery Image 8', aspect: 'aspect-[4/3]' },
+    { src: img1, alt: 'Woman standing in an urban alleyway', aspect: 'aspect-[3/4]' },
+    { src: img2, alt: 'Abstract neon light composition', aspect: 'aspect-square' },
+    { src: img3, alt: 'Modern interior living room design', aspect: 'aspect-[4/3]' },
+    { src: img4, alt: 'Portrait of a woman with natural hair', aspect: 'aspect-[3/4]' },
+    { src: imgHero, alt: 'Photographer workspace with camera gear', aspect: 'aspect-video' },
+    { src: img5, alt: 'Sunlight filtering through leaves', aspect: 'aspect-square' },
+    { src: imgFeatured1, alt: 'Fashion editorial shot in studio', aspect: 'aspect-[3/4]' },
+    { src: imgFeatured2, alt: 'Architectural detail of a modern building', aspect: 'aspect-[4/3]' },
 ];
 
 export default function GalleryPage() {
@@ -66,6 +66,7 @@ export default function GalleryPage() {
                                     alt={img.alt}
                                     className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
                                     placeholder="blur"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
                                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             </div>

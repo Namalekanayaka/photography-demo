@@ -95,6 +95,7 @@ export default function Hero() {
                             className="object-cover transition-transform duration-700 hover:scale-105"
                             priority
                             placeholder="blur"
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                     </div>
                 </div>

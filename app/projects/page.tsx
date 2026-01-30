@@ -130,6 +130,7 @@ export default function ProjectsPage() {
                                 fill
                                 className="object-cover transition-transform duration-700"
                                 placeholder="blur"
+                                sizes="(max-width: 768px) 100vw, 33vw"
                             />
                             <div className="overlay absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                                 <h3 className="text-white text-2xl font-bold uppercase tracking-wider">Urban Solitude</h3>

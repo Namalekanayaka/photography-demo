@@ -16,8 +16,24 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Photography Portfolio",
-  description: "Capturing moments that captivate your heart.",
+  title: {
+    template: '%s | Amelia Allen Photography',
+    default: 'Amelia Allen | Photography Portfolio',
+  },
+  description: "Professional portfolio of Amelia Allen, specializing in lifestyle, portrait, and documentary photography based in London. Capturing moments that captivate your heart.",
+  keywords: ["photography", "london photographer", "lifestyle", "portrait", "documentary", "fine art"],
+  openGraph: {
+    title: "Amelia Allen | Photography Portfolio",
+    description: "Capturing moments that captivate your heart.",
+    url: "https://your-domain.com",
+    siteName: "Amelia Allen Photography",
+    locale: "en_GB",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
