@@ -38,7 +38,7 @@ export default function FeaturedWorks() {
     }, []);
 
     return (
-        <section ref={containerRef} className="py-20 px-4 md:px-8 bg-brandBlack text-brandBeige">
+        <section id="gallery" ref={containerRef} className="py-20 px-4 md:px-8 bg-brandBlack text-brandBeige">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-[10vw] md:text-6xl font-black uppercase mb-12 tracking-tighter text-center md:text-left">
                     Featured Works

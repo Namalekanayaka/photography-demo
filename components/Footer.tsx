@@ -20,7 +20,7 @@ export default function Footer() {
     }, []);
 
     return (
-        <footer className="bg-brandBeige text-brandBlack pt-20 px-4 md:px-8 pb-4 overflow-hidden">
+        <footer id="contact" className="bg-brandBeige text-brandBlack pt-20 px-4 md:px-8 pb-10 overflow-hidden">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start mb-12">
                 <div className="mb-8 md:mb-0">
                     <p className="text-xl md:text-2xl font-bold mb-2 flex items-center gap-2">
@@ -44,9 +44,9 @@ export default function Footer() {
             <div className="border-t border-brandBlack border-opacity-20 pt-4">
                 {/* Huge Footer Text */}
                 <h1
-                    className="text-[18vw] leading-[0.75] font-black uppercase text-center tracking-tighter"
+                    className="text-[18vw] leading-none font-black uppercase text-center tracking-tighter"
                 >
-                    <div className="overflow-hidden">
+                    <div className="overflow-hidden py-4">
                         <span ref={textRef} className="block">Photography</span>
                     </div>
                 </h1>

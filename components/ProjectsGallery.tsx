@@ -56,7 +56,7 @@ export default function ProjectsGallery() {
     }, []);
 
     return (
-        <section ref={containerRef} className="py-20 px-4 md:px-8 bg-brandBeige text-brandBlack">
+        <section id="projects" ref={containerRef} className="py-20 px-4 md:px-8 bg-brandBeige text-brandBlack">
             <div className="max-w-7xl mx-auto">
                 <div className="flex justify-between items-end mb-12">
                     <h2 className="text-[10vw] md:text-7xl font-black uppercase tracking-tighter">Projects</h2>

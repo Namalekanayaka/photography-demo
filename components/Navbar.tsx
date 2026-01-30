@@ -24,9 +24,9 @@ export default function Navbar() {
     }, []);
 
     const navLinks = [
-        { name: 'About', href: '#about' },
-        { name: 'Gallery', href: '#gallery' },
-        { name: 'Project', href: '#projects' },
+        { name: 'About', href: '/about' },
+        { name: 'Gallery', href: '/#gallery' },
+        { name: 'Project', href: '/#projects' },
         { name: 'Contact', href: '#contact' },
     ];
 
@@ -35,9 +35,9 @@ export default function Navbar() {
             ref={navRef}
             className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center transition-colors duration-300"
         >
-            <div className="text-xl font-bold uppercase tracking-tighter mix-blend-difference text-brandBlack">
+            <Link href="/" className="text-xl font-bold uppercase tracking-tighter mix-blend-difference text-brandBlack cursor-pointer">
                 Photography
-            </div>
+            </Link>
 
             <div className="hidden md:flex gap-8">
                 {navLinks.map((link) => (
