@@ -8,15 +8,20 @@ export default function Footer() {
     const textRef = useRef(null);
 
     useEffect(() => {
-        gsap.from(textRef.current, {
-            y: '100%',
-            scrollTrigger: {
-                trigger: textRef.current,
-                start: 'top bottom',
-                end: 'bottom bottom',
-                scrub: 1,
-            }
+        gsap.registerPlugin(ScrollTrigger);
+        const ctx = gsap.context(() => {
+            gsap.from(textRef.current, {
+                y: '100%',
+                scrollTrigger: {
+                    trigger: textRef.current,
+                    start: 'top bottom',
+                    end: 'bottom bottom',
+                    scrub: 1,
+                }
+            });
         });
+
+        return () => ctx.revert();
     }, []);
 
     return (
@@ -44,9 +49,9 @@ export default function Footer() {
             <div className="border-t border-brandBlack border-opacity-20 pt-4">
                 {/* Huge Footer Text */}
                 <h1
-                    className="text-[18vw] leading-none font-black uppercase text-center tracking-tighter"
+                    className="text-[7vw] md:text-[10vw] leading-none font-black uppercase text-center tracking-tighter"
                 >
-                    <div className="overflow-hidden py-4">
+                    <div className="overflow-hidden py-24">
                         <span ref={textRef} className="block">Photography</span>
                     </div>
                 </h1>

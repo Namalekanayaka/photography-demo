@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -14,33 +15,36 @@ export default function Hero() {
     const splitRightRef = useRef(null);
 
     useEffect(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: containerRef.current,
-                start: 'top 80%',
-            }
-        });
+        const ctx = gsap.context(() => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: 'top 80%',
+                }
+            });
 
-        tl.from(titleRef.current, {
-            y: 100,
-            opacity: 0,
-            duration: 1,
-            ease: 'power4.out',
-        })
-            .from(subtitleRef.current, {
-                y: 50,
-                opacity: 0,
-                duration: 0.8,
-                ease: 'power4.out',
-            }, '-=0.5')
-            .from([splitLeftRef.current, splitRightRef.current], {
+            tl.from(titleRef.current, {
                 y: 100,
                 opacity: 0,
-                stagger: 0.2,
                 duration: 1,
                 ease: 'power4.out',
-            }, '-=0.5');
+            })
+                .from(subtitleRef.current, {
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: 'power4.out',
+                }, '-=0.5')
+                .from([splitLeftRef.current, splitRightRef.current], {
+                    y: 100,
+                    opacity: 0,
+                    stagger: 0.2,
+                    duration: 1,
+                    ease: 'power4.out',
+                }, '-=0.5');
+        });
 
+        return () => ctx.revert();
     }, []);
 
     return (
@@ -48,7 +52,7 @@ export default function Hero() {
             <div className="max-w-7xl mx-auto w-full">
                 <h1
                     ref={titleRef}
-                    className="text-[12vw] leading-[0.85] font-black uppercase text-brandBlack tracking-tighter mix-blend-darken text-center md:text-left"
+                    className="text-[8vw] md:text-[12vw] leading-[0.9] font-black uppercase text-brandBlack tracking-tighter mix-blend-darken text-center md:text-left"
                 >
                     Capturing
                 </h1>
@@ -70,12 +74,12 @@ export default function Hero() {
                         </p>
 
                         <div className="mt-8">
-                            <button className="flex items-center gap-2 uppercase tracking-widest text-sm hover:text-white transition-colors">
+                            <Link href="/about" className="flex items-center gap-2 uppercase tracking-widest text-sm hover:text-white transition-colors">
                                 About Us
                                 <span className="bg-brandBeige text-brandBlack rounded-full w-6 h-6 flex items-center justify-center text-xs group-hover:rotate-45 transition-transform">
                                     ↗
                                 </span>
-                            </button>
+                            </Link>
                         </div>
                     </div>
 
